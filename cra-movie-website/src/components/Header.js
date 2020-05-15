@@ -36,11 +36,6 @@ function Header() {
                 </li>
                 <li>
                   <strong>
-                    <Link to="/genre">GENRE</Link>
-                  </strong>
-                </li>
-                <li>
-                  <strong>
                     <Link to="/about">ABOUT</Link>
                   </strong>
                 </li>
@@ -51,12 +46,6 @@ function Header() {
                 </li>
               </ul>
             </div>
-            {/* <div className="col-sm-4">
-              <form action="#Link">
-                <input type="search" name="search" value="Search Here" />
-                <input type="submit" name="submit" value="Submit" />
-              </form>
-            </div> */}
           </div>
         </div>
       </div>

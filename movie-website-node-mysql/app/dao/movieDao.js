@@ -7,7 +7,11 @@ class MovieDao {
     }
     findAll(req, res) {
         // let sql = "SELECT * FROM movies where deleted_at is NULL"; // simple statement unless you have a lot of joins.
-        let sql = "SELECT * FROM movies";
+        // let sql = "SELECT * FROM movies";
+        let sql = `SELECT m.id, m.title, m.year, d.fname, d.lname, g.genre, m.rating, m.format, m.runtime, m.tagline,m.picture, m.description
+        from movies m
+        join directors d ON m.director_id = d.id
+        join genres g ON m.genre_id = g.id ORDER BY m.id;`
         this.pool.query(sql, function(err, rows) {
             if (err) {
                 res.json({
@@ -20,7 +24,12 @@ class MovieDao {
         });
     }
     findbyID(req, res, id) {
-        let sql = "SELECT * FROM movies where id= ?";
+        // let sql = "SELECT * FROM movies where id= ?";
+        let sql = `SELECT m.id, m.title, m.year, d.fname, d.lname, g.genre, m.rating, m.format, m.runtime,m.tagline, m.picture, m.description
+        from movies m
+        join directors d ON m.director_id = d.id
+        join genres g ON m.genre_id = g.id
+        where m.id = ?;`
         this.pool.query(sql, [id], function(err, rows) {
             if (err) {
                 res.json({
@@ -31,23 +40,6 @@ class MovieDao {
             res.json(rows[0]);
         });
     }
-
-    // findbyGenre(req, res, genre) {
-    //     let sql = `SELECT m.id, m.title, m.year, g.genre
-    // from movies m
-    //     join genres g ON m.genre_id = g.id
-    //     WHERE g.genre=?;
-    // `;
-    //     this.pool.query(sql, [genre], function(error, rows) {
-    //         if (error) {
-    //             res.json({
-    //                 error: true,
-    //                 message: error
-    //             });
-    //         }
-    //         res.json(rows);
-    //     });
-    // }
 
     //MY WAY (CHARLLIEYA)
     // updateById(req, res) {

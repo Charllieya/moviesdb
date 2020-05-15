@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function About() {
   const [page, setPage] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3030/api/pages/about")
+    fetch("http://localhost:3075/api/pages/about")
       .then((response) => response.json())
       .then((page) => {
         setPage(page);

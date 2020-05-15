@@ -7,7 +7,7 @@ const router = require("./app/routes/router"); //all more flexiable for api to s
 
 // as an api gets bigger (Scales), do you have a file system that can scale instead of a 1000 lines in one index.js. Router is a way to make the api more flexiable without people 1000 lines of code in one file.
 
-const PORT = 3030;
+const PORT = 3075;
 app.listen(PORT, () => {
     console.log(`Server on PORT: ${PORT}`);
 });
@@ -19,9 +19,10 @@ app.use(bodyParser.json()); //parse json package that is sent back to our api.
 //ALL ROUTES
 app.get("/", (req, res) => {
     res.json({
-        "All movies": "http://localhost:3030/api/movies",
-        "Find by Genre": "http://localhost:3030/api/genres",
-        "All pages": "http://localhost:3030/api/pages",
+        "All movies": "http://localhost:3075/api/movies",
+        "Find by Genre": "http://localhost:3075/api/genres",
+        "Find by Decade": "http://localhost:3075/api/years",
+        "All pages": "http://localhost:3075/api/pages",
     });
 });
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function Home() {
   const [page, setPage] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3030/api/pages/home")
+    fetch("http://localhost:3075/api/pages/home")
       .then((response) => response.json())
       .then((page) => {
         setPage(page);
@@ -76,7 +76,10 @@ function Home() {
               />
             </a>
             <h3 className="center">
-              <strong>ROLLING WITH THE 90s</strong>
+              <a href="http://localhost:3000/year/1990">
+                {" "}
+                <strong>ROLLING WITH THE 90s</strong>
+              </a>
             </h3>
           </div>
         </div>

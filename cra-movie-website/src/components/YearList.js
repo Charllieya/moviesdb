@@ -3,18 +3,18 @@ import React, { useState, useEffect } from "react";
 // import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
-function GenreList(props) {
+function YearList(props) {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    const { genre } = props.match.params;
-    fetch(`http://localhost:3030/api/genres/${genre}`)
+    const { year } = props.match.params;
+    fetch(`http://localhost:3075/api/years/${year}`)
       .then((response) => response.json())
       .then((data) => {
         let postData = data.map((post) => (
           <div className="post" key={post.id}>
             <h1>
               {/* <Link to={`genre/${post.id}`}> {post.genre}</Link> */}
-              <Link to={`${post.genre}/${post.id}`}> {post.title}</Link>
+              <Link to={`${post.year}/${post.id}`}> {post.title}</Link>
             </h1>
             {/* <p>{post.body}</p> */}
           </div>
@@ -35,4 +35,4 @@ function GenreList(props) {
   );
 }
 
-export default GenreList;
+export default YearList;

@@ -3,24 +3,19 @@ import React, { useState, useEffect } from "react";
 // import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
-function Genre() {
+function GenreList(props) {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3030/api/genres")
+    const { genre } = props.match.params;
+    fetch(`http://localhost:3075/api/genres/${genre}`)
       .then((response) => response.json())
       .then((data) => {
         let postData = data.map((post) => (
-          <div className="post" key={post.genre}>
-            <div className="col-sm-3">
-              <h1>
-                <img
-                  src={post.genre_pic}
-                  alt="genre pictures"
-                  className="img-responsive"
-                />
-                <Link to={`genre/${post.genre}`}> {post.genre}</Link>
+          <div className="post" key={post.id}>
+            <div className="col-sm-12">
+              <h1 className="movie_genre">
+                <Link to={`${post.genre}/${post.id}`}> {post.title}</Link>
               </h1>
-              <p>{post.body}</p>
             </div>
           </div>
         ));
@@ -29,7 +24,7 @@ function Genre() {
   }, []);
   return (
     <>
-      <div className="main border-top container">
+      <div className="container">
         <div className="row">
           <div className="col-sm-12">
             <div className="Blog"></div>
@@ -42,4 +37,4 @@ function Genre() {
   );
 }
 
-export default Genre;
+export default GenreList;

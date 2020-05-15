@@ -40,7 +40,7 @@ function Contact() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3030/api/pages/contact")
+    fetch("http://localhost:3075/api/pages/contact")
       .then((response) => response.json())
       .then((page) => {
         setPage(page);
