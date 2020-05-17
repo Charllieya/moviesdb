@@ -8,13 +8,13 @@ function Header() {
         <div className="container">
           <div className="row">
             <div className="col-sm-4">
-              <h2>ENABLE ACCESSIBILITY</h2>
+              <h2>MOVIES FROM EVERY DECADE, EVERY GENRE</h2>
             </div>
             <div className="col-sm-4">
-              <h2>Lorem, ipsum dolor sit amet consectetur adipisicing.</h2>
+              <h2>WELCOME TO MY PERSONAL MOVIE DATABASE</h2>
             </div>
             <div className="col-sm-4">
-              <h2>Lorem, ipsum.</h2>
+              <h2>CLICK BELOW TO SURF MY COLLECTION!</h2>
             </div>
           </div>
         </div>
@@ -22,7 +22,12 @@ function Header() {
       <div className="name">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12">
+            <div className="col-sm-4">
+              <a href="http://localhost:3000/">
+                <img src="/media/cinepixx.png" alt="CINEPHIXX" srcset="" />
+              </a>
+            </div>
+            <div className="col-sm-8">
               <ul>
                 <li>
                   <strong>

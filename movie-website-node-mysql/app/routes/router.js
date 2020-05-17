@@ -9,6 +9,8 @@ router.use("/genres", require("./api/genreRoutes"));
 
 router.use("/years", require("./api/yearRoutes"));
 
+router.use("/directors", require("./api/directorRoutes"));
+
 router.use("/pages", require("./api/pageRoutes"));
 
 router.use("/contacts", require("./api/contactRoutes"));

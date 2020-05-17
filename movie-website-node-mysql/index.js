@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
         "All movies": "http://localhost:3075/api/movies",
         "Find by Genre": "http://localhost:3075/api/genres",
         "Find by Decade": "http://localhost:3075/api/years",
+        "Find by Director": "http://localhost:3075/api/directors",
         "All pages": "http://localhost:3075/api/pages",
     });
 });

@@ -20,47 +20,41 @@ function Movie() {
   }, []);
   return (
     <>
-      <div className="sub-heading">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              <ul>
-                <li>
-                  <strong>
-                    <Link to="/genre">FILMS BY GENRE</Link>
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <Link to="/year">FILMS BY DECADE</Link>
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <Link to="/genre">FILMS BY DIRECTORS</Link>
-                  </strong>
-                </li>
-              </ul>
+      <div className="mainBody">
+        <div className="sub-heading">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <ul>
+                  <li>
+                    <strong>
+                      <Link to="/genre">SEARCH GENRE</Link>
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <Link to="/year">SEARCH DECADE</Link>
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <Link to="/director">SEARCH DIRECTORS</Link>
+                    </strong>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="main border-top container">
-        <div className="row">
-          <div className="col-sm-12">
-            <h3 className="guideHeading">Full Film Collection</h3>
+        <div className="main border-top container">
+          <div className="row">
+            <div className="col-sm-12">
+              <h1 className="mainHeading">Full Film Collection</h1>
+            </div>{" "}
+            {posts}{" "}
           </div>{" "}
-          {posts}{" "}
-        </div>{" "}
+        </div>
       </div>
-      {/* <div className="container_12">
-        <div className="grid_12"> */}
-      {/* <div className="Blog"></div>
-      <div className="col-sm-3">{posts}</div> */}
-      {/* {posts} */}
-      {/* {post.map(post => <div>{post.title}</div>)} */}
-      {/* </div>
-      </div> */}
     </>
   );
 }

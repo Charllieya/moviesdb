@@ -49,61 +49,64 @@ function Contact() {
 
   return (
     <>
-      <h1>{page.name}</h1>
-      <h5>{page.quote}</h5>
-      <div className="container contact-container">
-        <div className="row">
-          <div className="col-sm-12">
-            <form onSubmit={handleSubmit} name="Sent" id="contactForm">
-              <label>First Name</label>
-              <input
-                name="fname"
-                value={inserts.fname}
-                onChange={handleChange}
-                type="text"
-                className="fname"
-                id="fname"
-                required
-                placeholder="Enter First Name"
-              />
-              <br></br>
-              <label>Last Name</label>
-              <input
-                name="lname"
-                value={inserts.lname}
-                onChange={handleChange}
-                type="text"
-                className="lname"
-                id="lname"
-                required
-                placeholder="Enter Last Name"
-              />
-              <br></br>
-              <label>Email</label>
-              <input
-                name="email"
-                value={inserts.email}
-                onChange={handleChange}
-                type="email"
-                className="email"
-                id="email"
-                required
-                placeholder="Enter Email"
-              />
-              <br></br>
-              <label>What's On Your Mind? </label>
-              <textarea
-                name="notes"
-                value={inserts.notes}
-                onChange={handleChange}
-                type="text"
-                className="notes"
-                id="notes"
-                placeholder="Message"
-              />
-              <br></br>
-              <button>SEND</button>
-            </form>
+      <div className="mainBody">
+        <h1 className="mainHeading">{page.name}</h1>
+        <h3>{page.quote}</h3>
+        <div className="container contact-container">
+          <div className="row">
+            <div className="col-sm-12">
+              <form onSubmit={handleSubmit} name="Sent" id="contactForm">
+                <label>First Name</label>
+                <input
+                  name="fname"
+                  value={inserts.fname}
+                  onChange={handleChange}
+                  type="text"
+                  className="fname"
+                  id="fname"
+                  required
+                  placeholder="Enter First Name"
+                />
+                <br></br>
+                <label>Last Name</label>
+
+                <input
+                  name="lname"
+                  value={inserts.lname}
+                  onChange={handleChange}
+                  type="text"
+                  className="lname"
+                  id="lname"
+                  required
+                  placeholder="Enter Last Name"
+                />
+                <br></br>
+                <label>Email</label>
+                <input
+                  name="email"
+                  value={inserts.email}
+                  onChange={handleChange}
+                  type="email"
+                  className="email"
+                  id="email"
+                  required
+                  placeholder="Enter Email"
+                />
+                <br></br>
+                <label>What's On Your Mind? </label>
+                <textarea
+                  name="notes"
+                  value={inserts.notes}
+                  onChange={handleChange}
+                  type="text"
+                  className="notes"
+                  id="notes"
+                  placeholder="Message"
+                />
+                <br></br>
+                <button>SEND</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

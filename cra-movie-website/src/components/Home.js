@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
+// import React, { Component } from 'react';
+import ReactDOM from "react-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 function Home() {
   const [page, setPage] = useState([]);
@@ -11,34 +15,40 @@ function Home() {
   }, []);
   return (
     <>
-      <div className="main">
-        {/* <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              <h1>{page.quote}</h1>
-            </div>
-          </div>
-        </div> */}
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              <a href="#link">
-                <img
-                  src="media/classicCollection.png"
-                  className="img-responsive"
-                  alt=""
-                  sizes=""
-                  srcset=""
-                />
-              </a>
-            </div>
+      <h1 className="mainHeading">{page.content}</h1>
+      <Carousel>
+        <div>
+          <img src="media/topmovie2.jpg" />
+          <a href="http://localhost:3000/year/1995/15">
+            <p className="legend">Clueless (1995)</p>
+          </a>
+        </div>
+        <div>
+          <img src="media/topmovie1.jpg" />
+          <a href="http://localhost:3000/movie/25">
+            <p className="legend">Ferris Bueller's Day Off (1985)</p>
+          </a>
+        </div>
+        <div>
+          <img src="media/topmovie3.jpg" />
+          <a href="http://localhost:3000/year/1973/107">
+            <p className="legend">Westworld (1973)</p>
+          </a>
+        </div>
+      </Carousel>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <h3>
+              <strong>CHOOSE YOUR DECADE</strong>
+            </h3>
           </div>
         </div>
       </div>
       <div className="container">
         <div className="row">
           <div className="col-sm-4">
-            <a href="#link">
+            <a href="http://localhost:3000/year/1970">
               <img
                 src="media/seven.png"
                 className="img-responsive"
@@ -62,7 +72,9 @@ function Home() {
               />
             </a>
             <h3 className="center">
-              <strong>I LOVE THE 80s</strong>
+              <a href="http://localhost:3000/year/1980">
+                <strong>I LOVE THE 80s</strong>
+              </a>
             </h3>
           </div>
           <div className="col-sm-4">
@@ -87,14 +99,7 @@ function Home() {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            <h3>FUNKO!</h3>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12">
-            <a href="#link">Complete Your Collection</a>
+            <h3>CHOOSE YOUR GENRE</h3>
           </div>
         </div>
       </div>
@@ -116,32 +121,34 @@ function Home() {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            <h3>HORROR FILMS</h3>
+            <h3>
+              <strong> FEATURED HORROR FILMS</strong>
+            </h3>
           </div>
         </div>
       </div>
       <div className="container">
         <div className="row">
           <div className="col-sm-3">
-            <img src="media/rabid.png" alt="" sizes="" srcset="" />
+            <img src="media/rabid.png" alt="" />
             <div>
               <a href="http://localhost:3000/movie/72">Rabid (1977)</a>
             </div>
           </div>
           <div className="col-sm-3">
-            <img src="media/evilDead.png" alt="" sizes="" srcset="" />
+            <img src="media/evilDead.png" alt="" />
             <div>
               <a href="http://localhost:3000/movie/24"> The Evil Dead(1981)</a>
             </div>
           </div>
           <div className="col-sm-3">
-            <img src="media/frightNight.png" alt="" sizes="" srcset="" />
+            <img src="media/frightNight.png" alt="" />
             <div>
               <a href="http://localhost:3000/movie/31">Fright Night (1985)</a>
             </div>
           </div>
           <div className="col-sm-3">
-            <img src="media/it1990.png" alt="" sizes="" srcset="" />
+            <img src="media/it1990.png" alt="" />
             <div>
               <a href="http://localhost:3000/movie/89">
                 Stephen King's IT (1990)
@@ -165,10 +172,15 @@ function Home() {
             <img
               src="media/romanceCollection.png"
               class="img-responsive"
-              alt=""
-              sizes=""
-              srcset=""
+              alt="Romance Collection"
             />
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <h3>FEATURED ROMANTIC FILMS</h3>
           </div>
         </div>
       </div>

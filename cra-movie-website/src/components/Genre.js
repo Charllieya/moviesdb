@@ -12,7 +12,7 @@ function Genre() {
         let postData = data.map((post) => (
           <div className="post" key={post.genre}>
             <div className="col-sm-3">
-              <h1>
+              <h1 className="mainHeading">
                 <img
                   src={post.genre_pic}
                   alt="genre pictures"
@@ -33,8 +33,8 @@ function Genre() {
         <div className="row">
           <div className="col-sm-12">
             <div className="Blog"></div>
+            <h1 className="mainHeading">SEARCH BY GENRE</h1>
             {posts}
-            {/* {post.map(post => <div>{post.title}</div>)} */}
           </div>
         </div>
       </div>

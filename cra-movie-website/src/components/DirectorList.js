@@ -3,24 +3,19 @@ import React, { useState, useEffect } from "react";
 // import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
-function Year() {
+function DirectorList(props) {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3075/api/years")
+    const { id } = props.match.params;
+    fetch(`http://localhost:3075/api/directors/${id}`)
       .then((response) => response.json())
       .then((data) => {
         let postData = data.map((post) => (
-          <div className="post" key={post.decade}>
-            <div className="col-sm-4">
-              <h1 className="mainHeading">
-                <img
-                  src={post.decade_pic}
-                  alt="genre pictures"
-                  className="img-responsive"
-                />
-                <Link to={`year/${post.decade}`}> {post.decade}</Link>
+          <div className="post" key={post.id}>
+            <div className="col-sm-12">
+              <h1 className="movie_genre">
+                <Link to={`${post.director_id}/${post.id}`}> {post.title}</Link>
               </h1>
-              <p>{post.body}</p>
             </div>
           </div>
         ));
@@ -30,12 +25,12 @@ function Year() {
   return (
     <>
       <div className="mainBody">
-        <div className="main border-top container">
+        <div className="container">
           <div className="row">
             <div className="col-sm-12">
               <div className="Blog"></div>
-              <h1 className="mainHeading">SEARCH BY DECADE</h1>
               {posts}
+              {/* {post.map(post => <div>{post.title}</div>)} */}
             </div>
           </div>
         </div>
@@ -44,4 +39,4 @@ function Year() {
   );
 }
 
-export default Year;
+export default DirectorList;

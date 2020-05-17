@@ -24,7 +24,6 @@ function MovieSingle(props) {
                     className="img-responsive"
                     className="moviePics"
                     alt=""
-                    srcSet=""
                   />
                 </div>
                 <div className="col-sm-8">
@@ -60,37 +59,39 @@ function MovieSingle(props) {
 
   return (
     <>
-      <div className="sub-heading">
-        <div className=" container">
-          <div className="row">
-            <div className="col-sm-12">
-              <ul>
-                <li>
-                  <strong>
-                    <Link to="/genre">FILMS BY GENRE</Link>
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <Link to="/year">FILMS BY DECADE</Link>
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <Link to="/genre">FILMS BY DIRECTORS</Link>
-                  </strong>
-                </li>
-              </ul>
+      <div className="mainBody">
+        <div className="sub-heading">
+          <div className=" container">
+            <div className="row">
+              <div className="col-sm-12">
+                <ul>
+                  <li>
+                    <strong>
+                      <Link to="/genre">FILMS BY GENRE</Link>
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <Link to="/year">FILMS BY DECADE</Link>
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <Link to="/director">FILMS BY DIRECTORS</Link>
+                    </strong>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="singleFilm-heading">
-        <div className="sub container">
-          <div className="row">
-            <div className="col-sm-12">
-              <div className="MovieSingle"></div>
-              {post}
+        <div className="singleFilm-heading">
+          <div className="sub container">
+            <div className="row">
+              <div className="col-sm-12">
+                <div className="MovieSingle"></div>
+                {post}
+              </div>
             </div>
           </div>
         </div>
