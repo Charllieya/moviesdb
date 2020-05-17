@@ -67,17 +67,17 @@ function MovieSingle(props) {
                 <ul>
                   <li>
                     <strong>
-                      <Link to="/genre">FILMS BY GENRE</Link>
+                      <Link to="/genre">GENRES</Link>
                     </strong>
                   </li>
                   <li>
                     <strong>
-                      <Link to="/year">FILMS BY DECADE</Link>
+                      <Link to="/year">DECADES</Link>
                     </strong>
                   </li>
                   <li>
                     <strong>
-                      <Link to="/director">FILMS BY DIRECTORS</Link>
+                      <Link to="/director">DIRECTORS</Link>
                     </strong>
                   </li>
                 </ul>

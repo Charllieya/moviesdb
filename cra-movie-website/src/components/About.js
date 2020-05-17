@@ -18,16 +18,11 @@ function About() {
           <div className="row">
             <div className="col-sm-12">
               <div className="Blog"></div>
-              <h1 className="mainHeading">{page.name}</h1>
-              <img
-                src="media/ratings.png"
-                class="img-responsive"
-                alt="Romance Collection"
-              />
+              <h1 className="mainHeading">{page.name} CINEPHIXX</h1>
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className=" pgContent container">
           <div className="row">
             <div className="col-sm-4">
               <img
@@ -37,21 +32,34 @@ function About() {
               />
             </div>
             <div className="col-sm-8">
-              <h3>{page.quote}</h3>
+              <h3 className="pageContent">{page.quote}</h3>
             </div>
           </div>
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-sm-8">
-              <h3>{page.content}</h3>
-            </div>
-            <div className="col-sm-4">
+            <div className="col-sm-12">
               <img
-                src="media/breakfast.png"
+                src="media/ratings.png"
                 class="img-responsive"
                 alt="Romance Collection"
               />
+            </div>
+          </div>
+        </div>
+        <div className="bottomAbout">
+          <div className="pgContent container">
+            <div className="row">
+              <div className="col-sm-8">
+                <h3 className="pageContent">{page.content}</h3>
+              </div>
+              <div className="col-sm-4">
+                <img
+                  src="media/breakfast.png"
+                  class="img-responsive"
+                  alt="Romance Collection"
+                />
+              </div>
             </div>
           </div>
         </div>

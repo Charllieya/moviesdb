@@ -12,7 +12,7 @@ function Director() {
         let postData = data.map((post) => (
           <div className="post" key={post.id}>
             <div className="col-sm-3">
-              <h3>
+              <h3 className="sub-links">
                 <Link to={`director/${post.id}`}>
                   {post.fname} {post.lname}
                 </Link>
@@ -30,9 +30,8 @@ function Director() {
         <div className="row">
           <div className="col-sm-12">
             <div className="Blog"></div>
-            <h1>SEARCH BY DIRECTOR</h1>
+            <h1 className="mainHeading">SEARCH BY DIRECTOR</h1>
             {posts}
-            {/* {post.map(post => <div>{post.title}</div>)} */}
           </div>
         </div>
       </div>

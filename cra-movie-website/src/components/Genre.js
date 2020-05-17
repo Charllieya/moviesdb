@@ -12,7 +12,7 @@ function Genre() {
         let postData = data.map((post) => (
           <div className="post" key={post.genre}>
             <div className="col-sm-3">
-              <h1 className="mainHeading">
+              <h1 className="sub-links">
                 <img
                   src={post.genre_pic}
                   alt="genre pictures"

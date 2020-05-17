@@ -7,14 +7,20 @@ function Header() {
       <div className="top-nav font">
         <div className="container">
           <div className="row">
-            <div className="col-sm-4">
-              <h2>MOVIES FROM EVERY DECADE, EVERY GENRE</h2>
+            <div className="hidden-xs col-sm-4">
+              <h2 className="nav-heading">
+                MOVIES FROM EVERY DECADE, EVERY GENRE
+              </h2>
             </div>
             <div className="col-sm-4">
-              <h2>WELCOME TO MY PERSONAL MOVIE DATABASE</h2>
+              <h2 className="nav-heading">
+                WELCOME TO MY PERSONAL MOVIE DATABASE
+              </h2>
             </div>
-            <div className="col-sm-4">
-              <h2>CLICK BELOW TO SURF MY COLLECTION!</h2>
+            <div className="hidden-xs col-sm-4">
+              <h2 className="nav-heading">
+                CLICK BELOW TO SURF MY COLLECTION!
+              </h2>
             </div>
           </div>
         </div>

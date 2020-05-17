@@ -12,7 +12,7 @@ function Year() {
         let postData = data.map((post) => (
           <div className="post" key={post.decade}>
             <div className="col-sm-4">
-              <h1 className="mainHeading">
+              <h1 className="sub-links">
                 <img
                   src={post.decade_pic}
                   alt="genre pictures"

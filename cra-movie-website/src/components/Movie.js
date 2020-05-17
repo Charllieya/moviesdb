@@ -9,7 +9,7 @@ function Movie() {
       .then((data) => {
         let postData = data.map((post) => (
           <div className="post" key={post.id}>
-            <div className="col-sm-3">
+            <div className="col-sm-3 col-md-3">
               <Link to={`movie/${post.id}`}> {post.title}</Link>
               {/* <p>{post.body}</p> */}
             </div>
@@ -28,17 +28,17 @@ function Movie() {
                 <ul>
                   <li>
                     <strong>
-                      <Link to="/genre">SEARCH GENRE</Link>
+                      <Link to="/genre">GENRES</Link>
                     </strong>
                   </li>
                   <li>
                     <strong>
-                      <Link to="/year">SEARCH DECADE</Link>
+                      <Link to="/year">DECADES</Link>
                     </strong>
                   </li>
                   <li>
                     <strong>
-                      <Link to="/director">SEARCH DIRECTORS</Link>
+                      <Link to="/director">DIRECTORS</Link>
                     </strong>
                   </li>
                 </ul>

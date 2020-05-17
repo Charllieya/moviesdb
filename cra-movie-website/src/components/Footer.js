@@ -13,7 +13,9 @@ function Footer() {
                 </a>
               </h4>
               <p>"WHERE ALL FILMS ARE PERMITTED"</p>
-              <a href="https://www.linkedin.com/in/charllieya-smith-6aba51102/">
+              <a
+                href="https://www.linkedin.com/in/charllieya-smith-6aba51102/"
+                target="_blank">
                 LEARN MORE
               </a>
             </div>
@@ -24,6 +26,13 @@ function Footer() {
               <h4>SERVICES </h4>
               <a href="http://localhost:3000/contact">Contact</a>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="bottomFooter">
+        <div className="container">
+          <div className="row">
+            <h4>CINEPHIXX&copy; 2020</h4>
           </div>
         </div>
       </div>
