@@ -277,10 +277,10 @@ input[type="submit"]:hover {
 
 .singleFilm-heading {
     background-image: url(../media/pattern.jpg);
-    /* background-color: #c4c4c4; */
+    border-bottom: 1px solid #000;
+    background-color: #c4c4c4;
     color: #000;
     padding: 40px;
-    border-bottom: 1px solid #000;
 }
 
 .legend {

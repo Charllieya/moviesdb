@@ -13,7 +13,7 @@ function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:3030/api/contacts/create", {
+    fetch("http://localhost:3075/api/contacts/create", {
       method: "POST", //POST And PUT are the http methods. Usually we use GET
       headers: {
         "Content-Type": "application/json",

@@ -47,6 +47,11 @@ function Header() {
                 </li>
                 <li>
                   <strong>
+                    <Link to="/filmart">LOGOS</Link>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
                     <Link to="/about">ABOUT</Link>
                   </strong>
                 </li>

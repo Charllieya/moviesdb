@@ -11,7 +11,7 @@ class MovieDao {
         let sql = `SELECT m.id, m.title, m.year, d.fname, d.lname, g.genre, m.rating, m.format, m.runtime, m.tagline,m.picture, m.description
         from movies m
         join directors d ON m.director_id = d.id
-        join genres g ON m.genre_id = g.id ORDER BY m.id;`
+        join genres g ON m.genre_id = g.id ORDER BY m.id;`;
         this.pool.query(sql, function(err, rows) {
             if (err) {
                 res.json({
@@ -29,7 +29,7 @@ class MovieDao {
         from movies m
         join directors d ON m.director_id = d.id
         join genres g ON m.genre_id = g.id
-        where m.id = ?;`
+        where m.id = ?;`;
         this.pool.query(sql, [id], function(err, rows) {
             if (err) {
                 res.json({

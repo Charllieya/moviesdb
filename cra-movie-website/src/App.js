@@ -12,6 +12,7 @@ import Year from "./components/Year";
 import YearList from "./components/YearList";
 import Director from "./components/Director";
 import DirectorList from "./components/DirectorList";
+import FilmArt from "./components/FilmArt";
 import Footer from "./components/Footer";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/filmart" component={FilmArt} />
           <Route path="/movie/:id" component={MovieSingle} />
           <Route path="/movie" component={Movie} />
           <Route path="/genre" component={Genre} exact />
