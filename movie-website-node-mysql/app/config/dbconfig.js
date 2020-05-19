@@ -5,7 +5,7 @@ const pool = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "password",
-    database: "csmith_moviesdb",
+    database: "csmith_moviesdb_backup",
     socketPath: "/tmp/mysql.sock",
 });
 

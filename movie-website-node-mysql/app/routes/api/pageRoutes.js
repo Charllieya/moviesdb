@@ -15,26 +15,4 @@ router.get("/:name", (req, res) => {
     dao.findbyName(req, res, req.params.name);
 });
 
-// router.post("/update/:id", (req, res) => {
-//     console.log(req.body);
-
-//     //res.json(req.body);
-//     dao.updateById(req, res);
-// });
-
-// // /api/movies/create
-// router.post("/create", (req, res) => {
-//     console.log(req.body);
-
-//     //res.json(req.body);
-//     dao.createById(req, res);
-// });
-
-// router.get("/delete/:id", (req, res) => {
-//     console.log(req.body);
-
-//     //res.json(req.body);
-//     dao.deletebyID(req, res, req.params.id);
-// });
-
 module.exports = router;
