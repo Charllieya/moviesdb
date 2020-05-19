@@ -42,3 +42,4 @@ class MovieDao {
     }
 
 }
+module.exports = MovieDao;
